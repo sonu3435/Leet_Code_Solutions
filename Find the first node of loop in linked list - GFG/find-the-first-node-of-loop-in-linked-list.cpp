@@ -47,15 +47,15 @@ class Solution
     int findFirstNode(Node* head)
     {
         //write your code here
-        unordered_set<Node*> s;
-        while(head != NULL){
-            if(s.find(head) != s.end()){
-                return head->data;
-            }
-            s.insert(head);
-            head = head->next;
-        }
-     return -1;
+       unordered_set<Node*>s;
+       while(head != NULL){
+           if(s.find(head) != s.end()){
+               return head->data;
+           }
+           s.insert(head);
+           head = head->next;
+       }
+       return -1;
     }
 };
 
